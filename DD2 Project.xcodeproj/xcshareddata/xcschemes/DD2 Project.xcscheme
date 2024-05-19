@@ -37,7 +37,7 @@
       customLLDBInitFile = "/Users/mernaelsaaran/Downloads/6th Semester/DD2/Project/DD2 Project"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/abdelrahmanelaskary/Desktop/DD2 Project"
+      customWorkingDirectory = "/Users/abdelrahmanelaskary/Desktop/spring 2024/digital design 2/DD2 Project"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
