@@ -28,7 +28,7 @@ vector<vector<int>> parser_function()
 //    ifstream file(file_name);  // Open the input file
     
     vector<vector<int>> netlist; // 2D vector to store the netlist
-    ifstream file("file3.txt");  // Open the input file
+    ifstream file("file1.txt");  // Open the input file
     if (!file.is_open())
     { // Check if file opened successfully
         cout << "Failed to open the file." << endl;
@@ -104,6 +104,20 @@ int calculate_new_WL() {
     return temp_wire_length;
 }
 
+void printArrayAsBinary(int* array)
+{
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < columns; ++j) {
+            if (*(array + i * columns + j) != -1) {
+                cout << "0 ";
+            } else {
+                cout << "1 ";
+            }
+        }
+        cout << endl;
+    }
+}
+
 int main() {
     netlist = parser_function();
     num_of_components = netlist[0][0];
@@ -119,7 +133,6 @@ int main() {
     for (int i = 0; i < num_of_components; i++) {
         int x, y;
         do {
-
             x = rand() % rows;
             y = rand() % columns;
         } while (array[x][y] != -1);
@@ -142,12 +155,13 @@ int main() {
         }
         cout << endl;
     }
+    printArrayAsBinary(&array[0][0]);
     cout << "Initial total wire length = " << current_wire_length << endl;
     
     double initial_temperature = 500 * current_wire_length;
     double current_temperature = initial_temperature;
     double final_temperature = 5e-6 * (current_wire_length / num_of_nets);
-    double cooling_factor = 0.95;
+    double cooling_factor = 0.75;
     int x1, y1, x2, y2, id, id2, new_wire_length, delta_wire_length, i;
     auto start_time = high_resolution_clock::now();
     while (current_temperature > final_temperature) {
@@ -162,11 +176,9 @@ int main() {
                 affected_nets.insert(components_netlists[id].begin(), components_netlists[id].end());
                 affected_nets.insert(components_netlists[id2].begin(), components_netlists[id2].end());
                 swap(components_locations[id], components_locations[id2]);
-
             } else {
                 affected_nets.insert(components_netlists[id].begin(), components_netlists[id].end());
                 components_locations[id] = {x2, y2};
-
             }
             temp_netlist_lengths = netlist_lengths;
             new_wire_length = calculate_new_WL();
@@ -200,6 +212,8 @@ int main() {
         }
         cout << endl;
     }
+    printArrayAsBinary(&array[0][0]);
+    
     cout << "Final total wire length = " << current_wire_length << endl;
     cout << "Time taken to find the optimal solution: " << duration.count() << " milliseconds" << endl;
 

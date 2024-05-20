@@ -30,6 +30,7 @@
 		980CE2CB2BF56B6A0077A176 /* file5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file5.txt; sourceTree = "<group>"; };
 		980CE2CC2BF56B6A0077A176 /* file4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file4.txt; sourceTree = "<group>"; };
 		980CE2CD2BF56B6A0077A176 /* file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file1.txt; sourceTree = "<group>"; };
+		98E5FB142BFAB53100EEC6B4 /* file6.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = file6.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 		8009D2F32BEF89620005E6AC = {
 			isa = PBXGroup;
 			children = (
+				98E5FB142BFAB53100EEC6B4 /* file6.txt */,
 				980CE2CD2BF56B6A0077A176 /* file1.txt */,
 				980CE2CA2BF56B6A0077A176 /* file2.txt */,
 				980CE2C92BF56B6A0077A176 /* file3.txt */,

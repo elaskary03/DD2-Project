@@ -34,7 +34,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      customLLDBInitFile = "/Users/mernaelsaaran/Downloads/6th Semester/DD2/Project/DD2 Project"
+      customLLDBInitFile = "/Users/abdelrahmanelaskary/Desktop/spring 2024/digital design 2/DD2 Project"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
       customWorkingDirectory = "/Users/abdelrahmanelaskary/Desktop/spring 2024/digital design 2/DD2 Project"
